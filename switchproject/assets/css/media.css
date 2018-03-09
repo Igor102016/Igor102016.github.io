@@ -1,0 +1,97 @@
+/* Desktop first */
+
+@media screen and (max-width: 980px) {
+	.header-menu ul {
+		display: none;
+	}
+	.mobile-menu-icon {
+		display: block;
+	}
+	.slick-next {
+		right: -10%;
+	}
+	.slick-prev {
+		left: -10%;
+	}
+	.post-item {
+		display: block;
+		text-align: center;
+		margin-bottom: 25px;
+		cursor: pointer;
+	}
+	.post-img-wrapper {
+		float: none;
+		display: inline-block;
+		width: 100%;
+		height: 250px;
+		margin-right: 0;
+	}
+	.footer-contacts form {
+		text-align: center;
+	}
+	.footer-contacts form input, .footer-contacts textarea, .footer-contacts button {
+		max-width: 500px;
+	}
+	.advert-item:last-of-type {
+		margin-top: 50px;
+	}
+}
+@media  screen and (max-width: 768px) {
+	.search input {
+		width: 90px;
+	}
+	.main-title h1 {
+		padding-top: 0;
+		margin-top: 0;
+	}
+	.gallery-item img {
+		width: 100%;
+		max-width: 500px;
+		height: auto;
+	}
+	.team-item {
+		margin-bottom: 26px;
+	}
+}
+@media  screen and (max-width: 480px) {
+	header {
+		min-height: 550px;
+		padding: 9px 20px 30px 20px;
+	}
+	.main-title h1 {
+		font-size: 48px;
+	}
+	.search input {
+		width: 85%;
+		max-width: 320px;
+	}
+	.advert-item:last-of-type {
+		margin-top: 30px;
+		max-width: 300px;
+	}
+	.search {
+		width: 100%;
+		position: absolute;
+		top: 33px;
+		left: 0;
+		display: none;
+		padding: 0 20px;
+	}
+	.mobile-search-trigger {
+		display: inline-block;
+	}
+}
+@media  screen and (max-width: 380px) {
+	.filter ul {
+		display: block;
+	}
+}
+
+
+/* Mobile first */
+
+@media  screen and (min-width: 959px) {
+	.mobile-menu-icon {
+		display: none !important;
+	}
+}
