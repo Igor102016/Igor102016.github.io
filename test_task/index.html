@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--[if lt IE 9]>
+	    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<!--[if lt IE 9]>
+	    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<![endif]-->
+
+	<title>Test task</title>
+	<meta name="keywords" content="test">
+	<meta name="description" content="test">
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:700" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="assets/plugins/slick-1.8.0/slick/slick.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/media.css">
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBob3EE4z9A2XmroVwwp7kw3OzISUJsNpI&callback=initMap" async defer></script>
+</head>
+<body>
+	<!-- Header start -->
+	<header>
+		<nav class="header-nav">
+			<div class="container clearfix">
+				<div class="logo">
+					<a href="#">Богдановский<br><span class="accent-color">карьер</span></a>
+				</div>
+				<div class="mob-menu-icon">
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+				<div class="nav-menu">
+					<ul>
+						<li><a href="#info">Производство</a></li>
+						<li><a href="#" class="divider"></a></li>
+						<li><a href="#address">Адрес КАРЬЕРА</a></li>
+					</ul>
+					<a href="#" class="call-button" data-toggle="modals" data-target=".modal-contact">Заказать звонок</a>
+				</div>
+			</div>
+		</nav>
+		<div class="main-slider">
+			<div class="slide" style="background-image: url('assets/img/slider-slide1.jpg');"></div>
+			<div class="slide" style="background-image: url('assets/img/slider-slide2.jpg');"></div>
+			<div class="slide" style="background-image: url('assets/img/slider-slide1.jpg');"></div>
+			<div class="slide" style="background-image: url('assets/img/slider-slide2.jpg');"></div>
+		</div>
+	</header>
+	<!-- Header end -->
+
+	<!-- Section info start -->
+		<section id="info" class="info">
+			<div class="container">
+				<div class="column col-left">
+					<h2>Производим и продаем щебень</h2>
+					<p>Площадь участка 96,1 га. Щебень и гравий из плотных пород для строительных работ. Прочность соответствует марке 800 (ДР-12). Запасы по гравию 28 %. Пески и пески-отсевы Богдановского-2 участка могут быть использованы в качестве строительного и дорожного материала. Мощность толщи 12-22,1 метра. Уровень грунтовых вод расположен ниже подошвы полезной толщи. Концентрация радионуклидов соответствует 1 классу СП 2.6.1.758-99.</p>
+					<p><span class="bold">Щебень 20×40</span> пригоден в производстве бетона и изготовлении конструкций из него, для дорожного строительства при закладке фундамента зданий, при возведении производственных всех видов сооружений и др.</p>
+				</div>
+				<div class="column col-right">
+					<h3>Контакты</h3>
+					<p class="bold">Звоните:</p>
+					<p class="">8 (800) 555-93-9</p>
+					<p class="">8 (495) 638-55-85</p>
+				</div>
+			</div>
+		</section>
+	<!-- Section info end -->
+
+	<!-- Section address sart-->
+	<section id="address" class="address">
+		<div class="container">
+			<h2>Адрес карьера</h2>
+			<p><span class="marker"><img src="assets/img/address-marker-yellow.svg" width="20" height="30" alt="map-marker"></span>поселок Ханино, Суворовский район, Тульская область, Россия</p>
+		</div>
+	</section>
+	<!-- Section address end-->
+
+	<!-- Map start -->
+	<div id="map"></div>
+	<!-- Map end -->
+
+	<!-- Footer start -->
+	<footer>
+		<div class="copyright">© 2015, Copyright</div>
+	</footer>
+	<!-- Footer end -->
+
+	<!-- Modal window -->
+	<div class="modals modal-contact">
+		<div class="modal-content">
+			<a href="#" class="close-modal">X</a>
+			<h3 class="text-center">Введите ваши данные</h3>
+			<form class="form" action="#">
+				<input placeholder="Введите Ваше имя" type="text">
+				<input class="phone-input" placeholder="Введите ваш номер телефона" type="text">
+				<div class="text-center">
+					<button type="submit">Отправить</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- Modal window end -->
+
+	<!-- Map initialization script -->
+	<script>
+	   var map;
+	   var iconCustom = "assets/img/map-marker.jpg"
+	    function initMap() {
+	   		 map = new google.maps.Map(document.getElementById('map'), {
+	         center: {lat: 54.2150742, lng: 36.6141573},
+	          zoom: 12,
+	          zoomControl: false,
+	          mapTypeControl: false,
+	  		  scaleControl: false,
+	  		  streetViewControl: false,
+	  		  scrollwheel: false,
+	  		  disableDefaultUI: true
+	        });
+	   		 var marker = new google.maps.Marker({
+	   		    position: {lat: 54.2011295, lng: 36.623889},
+	   		    map: map,
+	   		    icon : iconCustom
+	   		});
+
+	    }
+	</script>
+
+
+	<script  src="assets/plugins/jquery-2.2.4.min.js"></script>
+	<script  src="assets/plugins/slick-1.8.0/slick/slick.min.js"></script>
+	<script  src="assets/js/script.js"></script>
+</body>
+</html>
